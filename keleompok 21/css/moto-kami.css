@@ -1,0 +1,25 @@
+.moto-kami {
+	background-color: white;
+	padding: 20px 60px;
+}
+.moto-kami .moto {
+	width: 20%;
+	padding: 20px;
+	display: inline-block;
+}
+.moto-kami i {
+	font-size: 40px;
+	color: #7A04FF;
+}
+.moto-kami h3 {
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+@media screen and (max-width: 425px){
+
+	.moto-kami .moto {
+		width: 100%;
+	}
+
+}

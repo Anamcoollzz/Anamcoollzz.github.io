@@ -1,0 +1,39 @@
+.keranjang {
+	display: block;
+	padding: 100px 200px;
+	background-color: white;
+	margin-bottom: 20px;
+}
+
+.keranjang img {
+	max-width: 300px;
+}
+.keranjang h1 {
+	margin-bottom: 20px;
+}
+
+@media screen and (max-width: 425px) {
+
+	.keranjang {
+		padding: 50px 10px;
+	}
+
+	.keranjang .keranjang-kiri {
+		width: 100%;
+		display: block;
+	}
+
+	.keranjang-kanan {
+		margin-left: 0px;
+		width: 100%;
+	}
+
+	.keranjang-kanan .keranjang {
+		width: 82%;
+	}
+
+	.keranjang img {
+		max-width: 50px;
+	}
+
+}

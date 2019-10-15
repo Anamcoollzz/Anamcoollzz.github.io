@@ -1,0 +1,52 @@
+.masuk h2  {
+	text-align: center;
+	margin-top: 150px;
+	margin-bottom: 30px;
+}
+.masuk .masuk-form {
+	margin: auto;
+	padding: 30px;
+	background-color: #FFFFFF;
+	display: block;
+	width: 300px;
+}
+
+.masuk input {
+	padding: 10px 20px;
+	border: 1px solid white;
+	width: 86%;
+	margin-bottom: 20px;
+	border: 1px solid #7A04FF;
+	background-color: #E5E5E5;
+}
+
+.masuk button {
+	background-color: #7A04FF;
+	padding: 10px 20px;
+	width: 100%;
+	color: white;
+	border: none;
+}
+
+@media screen and (max-width: 425px) {
+
+	.masuk {
+		padding: 50px 10px;
+	}
+
+	.masuk input {
+		width: 82%;
+	}
+
+	.masuk h2  {
+		text-align: center;
+		margin-top: 50px;
+		margin-bottom: 30px;
+	}
+
+	.masuk .masuk-form {
+		width: 80%;
+		display: block;
+	}
+
+}

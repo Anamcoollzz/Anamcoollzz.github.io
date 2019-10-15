@@ -1,0 +1,23 @@
+.btn {
+	border: none;
+	padding: 10px 20px;
+	color: white;
+}
+
+.btn-primary {
+	background-color: #7A04FF;
+}
+
+.btn-lg {
+	padding: 20px 40px;
+}
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.table td, th {
+	border: 1px solid #C9C9C9;
+	padding: 10px;
+}

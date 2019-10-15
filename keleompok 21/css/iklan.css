@@ -1,0 +1,43 @@
+.iklan {
+	margin-bottom: 100px;
+}
+.iklan .item{
+	display: inline-block;
+	width: 31%;
+	margin-right: 43px;
+	background-color: white;
+	height: 400px;
+}
+.iklan .item:last-child{
+	margin-right: 0px;
+}
+.iklan img {
+	height: 400px;
+	max-width: 100%;
+}
+.iklan .beli {
+	margin-top: -50%;
+}
+.iklan a {
+	color: black;
+	background-color: white;
+	padding: 20px 50px;
+	text-decoration: none;
+	margin-left: calc(31% + 20px);
+	position: relative;
+}
+
+@media screen and (max-width: 425px){
+
+	.iklan {
+		margin-bottom: 100px;
+		margin-top: -200px;
+	}
+
+	.iklan .item {
+		width: 90%;
+		margin-bottom: 20px;
+		margin-left: 5%;
+	}
+
+}

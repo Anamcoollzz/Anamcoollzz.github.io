@@ -1,0 +1,44 @@
+footer {
+	margin-top: 100px;
+	background-color: black;
+	padding: 100px 60px;
+}
+footer li {
+	list-style-type: none;
+	color: white;
+	margin-bottom: 10px;
+}
+footer a {
+	text-decoration: none;
+	color: white;
+}
+footer .item {
+	vertical-align: top;
+	width: 20%;
+	padding: 20px;
+	display: inline-block;
+}
+footer h3 {
+	color: white;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+footer input, footer button{
+	padding: 10px 30px;
+	margin-right: 0;
+	border-style: none;
+}
+footer input {
+	width: 100px;
+}
+footer button{
+	padding: 10px 20px;
+	background-color: #7A04FF;
+}
+
+
+@media screen and (max-width: 425px){
+	footer .item {
+		width: 100%;
+	}
+}

@@ -1,0 +1,49 @@
+.banner {
+	display: block;
+	margin-bottom: 250px;
+}
+.banner h1, .banner h2 {
+	color: white;
+}
+.banner h1 {
+	margin-bottom: 15px;
+}
+.banner h1:last-child {
+	margin-bottom: 25px;
+}
+.banner img {
+	max-width: 100%;
+}
+.banner .produk {
+	margin-top: -400px;
+	margin-left: 200px;
+}
+.banner .beli-sekarang {
+	margin-top: 30px;
+	background-color: #7A04FF;
+	padding: 20px 30px;
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}
+
+@media screen and (max-width: 425px){
+	.banner .produk {
+		margin-top: -150px;
+		margin-left: 100px;
+	}
+
+	.banner h1 {
+		font-size: 15px;
+	}
+
+	.banner h2 {
+		font-size: 11px;
+	}
+
+	.banner .beli-sekarang {
+		font-size: 11px;
+		background-color: #7A04FF;
+		padding: 10px 15px;
+	}
+}
