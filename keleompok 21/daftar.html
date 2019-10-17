@@ -76,22 +76,24 @@
 	<div class="masuk">
 		<h2>Daftar untuk belanja</h2>
 		<div class="masuk-form">
-			Nama Lengkap
-			<br>
-			<input type="text">
-			<br>
-			Email
-			<br>
-			<input type="email">
-			<br>
-			Password
-			<br>
-			<input type="Password">
-			<br>
-			<button type="submit">Daftar</button>
-			<br>
-			<br>
-			Sudah punya akun? <a href="masuk.html">masuk</a>
+			<form onsubmit="alert('Silahkan Login Untuk Melanjutkan')" action="masuk.html">
+				Nama Lengkap
+				<br>
+				<input type="text" required>
+				<br>
+				Email
+				<br>
+				<input type="email" required>
+				<br>
+				Password
+				<br>
+				<input type="Password" required>
+				<br>
+				<button type="submit">Daftar</button>
+				<br>
+				<br>
+				Sudah punya akun? <a href="masuk.html">masuk</a>
+			</form>
 		</div>
 	</div>
 	
