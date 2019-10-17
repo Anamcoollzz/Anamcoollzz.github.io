@@ -1,0 +1,102 @@
+.detail-produk {
+	padding: 100px 0px 300px 100px;
+	background-color: #FFFFFF;
+	vertical-align: top;
+	margin-bottom: 20px;
+}
+
+.detail-produk .detail-produk-kiri {
+	width: 40%;
+	display: block;
+	float: left;
+}
+
+.detail-produk-kiri .gambar-gede {
+	margin-bottom: 20px;
+}
+
+.detail-produk-kiri img {
+	max-width: 100%;
+	box-shadow: 1px 1px 10px black;
+}
+
+.kumpulan-gambar-kecil {
+	display: block;
+	width: 100%;
+}
+
+.gambar-kecil {
+	margin-right: 10px;
+	width: 30%;
+	display: inline-block;
+}
+
+.gambar-kecil img{
+	max-width: 100%;
+}
+
+
+.detail-produk-kanan {
+	margin-left: 60px;
+	width: 44%;
+	display: inline-block;
+}
+
+.detail-produk-kanan .detail-produk {
+	width: 25%;
+	display: inline-block;
+	padding: 27px;
+	box-shadow: 2px 2px 20px black;
+	margin-bottom: 50px;
+	margin-right: 10px;
+	text-align: center;
+}
+
+.detail-produk-kanan .judul-produk{
+	text-align: center;
+	padding-top: 20px;
+	font-size: 30px;
+	color: black;
+	text-decoration: none;
+	margin-bottom: 10px;
+}
+
+.detail-produk-kanan .beli {
+	margin-top: 20px;
+	background-color: #7A04FF;
+	padding: 10px 20px;
+	border: none;
+	color: white;
+}
+
+.detail-produk-kanan table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.detail-produk-kanan td {
+	padding: 10px;
+	border: 1px solid #6E6E6E;
+}
+
+@media screen and (max-width: 425px) {
+
+	.detail-produk {
+		padding: 50px 10px;
+	}
+
+	.detail-produk .detail-produk-kiri {
+		width: 100%;
+		display: block;
+	}
+
+	.detail-produk-kanan {
+		margin-left: 0px;
+		width: 100%;
+	}
+
+	.detail-produk-kanan .detail-produk {
+		width: 82%;
+	}
+
+}

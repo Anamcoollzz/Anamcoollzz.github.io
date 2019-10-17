@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Masuk</title>
+	<meta name="author" content="Hairul Anam, Firdaus Ababil">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/grid.css">
+	<link rel="stylesheet" href="css/general.css">
+	<link rel="stylesheet" href="css/navbar.css">
+	<link rel="stylesheet" href="css/banner.css">
+	<link rel="stylesheet" href="css/iklan.css">
+	<link rel="stylesheet" href="css/katalog.css">
+	<link rel="stylesheet" href="css/moto-kami.css">
+	<!-- masuk -->
+	<link rel="stylesheet" href="css/masuk.css">
+	<!-- kategori -->
+	<link rel="stylesheet" href="css/kategori.css">
+	<!-- produk -->
+	<link rel="stylesheet" href="css/produk.css">
+	<!-- keranjang -->
+	<link rel="stylesheet" href="css/keranjang.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<!-- font -->
+	<link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
+	<script>
+		function gotoKeranjang() {
+			window.location = 'keranjang.html';
+		}
+		function haloDropDown() {
+			var x = document.getElementById("navigasiku");
+			if (x.className === "navigasiku") {
+				x.className += " responsive";
+			} else {
+				x.className = "navigasiku";
+			}
+		}
+	</script>
+</head>
+<body>
+	
+	<header>
+		<div class="logo2">Tool Kita</div>
+		<a href="javascript:void(0);" class="icon" onclick="haloDropDown()">&#9776;</a>
+		<div class="navigasiku" id="navigasiku">
+			<div class="logo">Tool Kita</div>
+			<a href="index.html" class="active">Beranda</a>
+			<div class="dropdown">
+				<button class="dropbtn">Belanja
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="kategori.html">Kategori</a>
+					<a href="detail-produk.html">Detail Produk</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn">Halaman
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="keranjang.html">Keranjang</a>
+				</div>
+			</div>
+			<a href="masuk.html">Masuk</a>
+			<a href="daftar.html">Daftar</a>
+			<div class="cart-dan-pencarian">
+				<i class="fa fa-shopping-cart" style="cursor: pointer;" onclick="gotoKeranjang()"></i>
+				&nbsp;&nbsp;&nbsp;
+				<i class="fa fa-search"></i>
+			</div>
+		</div>
+	</header>
+	<div class="masuk">
+		<h2>Masuk untuk belanja</h2>
+		<div class="masuk-form">
+			<form action="index.html">
+				Email
+				<br>
+				<input type="email" required>
+				<br>
+				Password
+				<br>
+				<input type="Password" required>
+				<br>
+				<button type="submit">Masuk</button>
+				<br>
+				<br>
+				Belum punya akun? <a href="daftar.html">daftar</a>
+			</form>
+		</div>
+	</div>
+	
+	<footer>
+		<div class="item">
+			<h3>Kategori</h3>
+			<ul>
+				<li>Laptop</li>
+				<li>Smartphone</li>
+				<li>Aksesoris</li>
+			</ul>
+		</div>
+		<div class="item">
+			<h3>Perusahaan</h3>
+			<ul>
+				<li>Tentang Kami</li>
+				<li>Kontak</li>
+			</ul>
+		</div>
+		<div class="item">
+			<h3>Alamat</h3>
+			<ul>
+				<li>Halmahera gang 4 no 7a</li>
+				<li>(+62) 853 2277 8935</li>
+				<li>
+					<a href="">hairulanam21@gmail.com</a>
+				</li>
+				<li>
+					<a href="">162410101054@students.unej.ac.id</a>
+				</li>
+			</ul>
+		</div>
+		<div class="item">
+			<h3>Yuk Langganan</h3>
+			<input type="email">
+			<button type="submit">Kirim</button>
+		</div>
+	</footer>	
+</body>
+</html>
