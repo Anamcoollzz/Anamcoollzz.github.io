@@ -1,0 +1,40 @@
+.pesanan {
+	display: block;
+	padding: 100px 200px;
+	background-color: white;
+	margin-bottom: 20px;
+}
+
+.pesanan img {
+	max-width: 300px;
+}
+.pesanan h1 {
+	margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 425px) {
+
+	.pesanan {
+		padding: 50px 10px;
+	}
+
+	.pesanan .pesanan-kiri {
+		width: 100%;
+		display: block;
+	}
+
+	.pesanan-kanan {
+		margin-left: 0px;
+		width: 100%;
+	}
+
+	.pesanan-kanan .pesanan {
+		width: 82%;
+	}
+
+	.pesanan img {
+		max-width: 50px;
+	}
+
+}

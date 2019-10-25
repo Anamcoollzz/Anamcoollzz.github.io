@@ -1,0 +1,77 @@
+.profil {
+	padding: 100px 0px 300px 100px;
+	background-color: #FFFFFF;
+	vertical-align: top;
+	margin-bottom: 20px;
+}
+
+.profil .profil-kiri {
+	width: 40%;
+	display: block;
+	float: left;
+}
+
+.profil-kiri .gambar-gede {
+	margin-bottom: 20px;
+}
+
+.profil-kiri img {
+	max-width: 100%;
+	box-shadow: 1px 1px 10px black;
+}
+
+.profil-kanan {
+	margin-left: 60px;
+	width: 44%;
+	display: inline-block;
+}
+
+.profil-kanan .profil {
+	width: 25%;
+	display: inline-block;
+	padding: 27px;
+	box-shadow: 2px 2px 20px black;
+	margin-bottom: 50px;
+	margin-right: 10px;
+	text-align: center;
+}
+
+.profil-kanan table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.profil-kanan td {
+	padding: 10px;
+}
+
+.profil-kanan .nama{
+	text-align: center;
+	padding-top: 20px;
+	font-size: 30px;
+	color: black;
+	text-decoration: none;
+	margin-bottom: 10px;
+}
+
+@media screen and (max-width: 425px) {
+
+	.profil {
+		padding: 50px 10px;
+	}
+
+	.profil .profil-kiri {
+		width: 100%;
+		display: block;
+	}
+
+	.profil-kanan {
+		margin-left: 0px;
+		width: 100%;
+	}
+
+	.profil-kanan .profil {
+		width: 82%;
+	}
+
+}

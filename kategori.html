@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -23,6 +22,14 @@
 	<!-- keranjang -->
 	<link rel="stylesheet" href="css/keranjang.css">
 	<link rel="stylesheet" href="css/footer.css">
+	<!-- checkout -->
+	<link rel="stylesheet" href="css/checkout.css">
+	<!-- profil -->
+	<link rel="stylesheet" href="css/profil.css">
+	<!-- pesanan -->
+	<link rel="stylesheet" href="css/pesanan.css">
+	<!-- search -->
+	<link rel="stylesheet" href="css/search.css">
 	<!-- font -->
 	<link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
 	<script>
@@ -42,37 +49,42 @@
 <body>
 
 	<header>
-		<div class="logo2">Tool Kita</div>
-		<a href="javascript:void(0);" class="icon" onclick="haloDropDown()">&#9776;</a>
-		<div class="navigasiku" id="navigasiku">
-			<div class="logo">Tool Kita</div>
-			<a href="index.html" class="active">Beranda</a>
-			<div class="dropdown">
-				<button class="dropbtn">Belanja
-					<i class="fa fa-caret-down"></i>
-				</button>
-				<div class="dropdown-content">
-					<a href="kategori.html">Kategori</a>
-					<a href="detail-produk.html">Detail Produk</a>
-				</div>
-			</div>
-			<div class="dropdown">
-				<button class="dropbtn">Halaman
-					<i class="fa fa-caret-down"></i>
-				</button>
-				<div class="dropdown-content">
-					<a href="keranjang.html">Keranjang</a>
-				</div>
-			</div>
-			<a href="masuk.html">Masuk</a>
-			<a href="daftar.html">Daftar</a>
-			<div class="cart-dan-pencarian">
-				<i class="fa fa-shopping-cart" style="cursor: pointer;" onclick="gotoKeranjang()"></i>
-				&nbsp;&nbsp;&nbsp;
-				<i class="fa fa-search"></i>
+	<div class="logo2">Tool Kita</div>
+	<a href="javascript:void(0);" class="icon" onclick="haloDropDown()">&#9776;</a>
+	<div class="navigasiku" id="navigasiku">
+		<div class="logo">Tool Kita</div>
+		<a href="index.html" class="active">Beranda</a>
+		<div class="dropdown">
+			<button class="dropbtn">Belanja
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="kategori.html">Kategori</a>
+				<a href="detail-produk.html">Detail Produk</a>
 			</div>
 		</div>
-	</header>
+		<div class="dropdown">
+			<button class="dropbtn">Halaman
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="keranjang.html">Keranjang</a>
+				<a href="profil.html">Profil</a>
+				<a href="pesanan.html">Pesanan</a>
+				<a href="checkout.html">Checkout</a>
+			</div>
+		</div>
+		<a href="masuk.html">Masuk</a>
+		<a href="daftar.html">Daftar</a>
+		<div class="cart-dan-pencarian">
+			<i class="fa fa-shopping-cart" style="cursor: pointer;" onclick="gotoKeranjang()"></i>
+			&nbsp;&nbsp;&nbsp;
+			<span href="" id="pencarian">
+				<i class="fa fa-search"></i>
+			</span>
+		</div>
+	</div>
+</header>
 	<div class="kategori">
 		<div class="kategori-kiri">
 			<div class="kategori-panel">
@@ -195,73 +207,108 @@
 	</div>
 
 	<div class="moto-kami">
-		<div class="moto">
-			<center>
-				<i class="fa fa-car"></i>
-				<br>
-				<h3>Gratis Ongkir</h3>
-				<p>Gratis pengiriman untuk area kampus.</p>
-			</center>
-		</div>
-		<div class="moto">
-			<center>
-				<i class="fa fa-dollar"></i>
-				<br>
-				<h3>Harga Terjangkau</h3>
-				<p>Produk yang kami tawarkan relativ murah.</p>
-			</center>
-		</div>
-		<div class="moto">
-			<center>
-				<i class="fa fa-cubes"></i>
-				<br>
-				<h3>Banyak Produk Pilihan</h3>
-				<p>Dapatkan banyak pilihan kebutuhan anda disini.</p>
-			</center>
-		</div>
-		<div class="moto">
-			<center>
-				<i class="fa fa-paypal"></i>
-				<br>
-				<h3>Garansi</h3>
-				<p>Semua produk wajib digaransikan.</p>
-			</center>
-		</div>
+	<div class="moto">
+		<center>
+			<i class="fa fa-car"></i>
+			<br>
+			<h3>Gratis Ongkir</h3>
+		<p>Gratis pengiriman untuk area kampus.</p>
+		</center>
 	</div>
+	<div class="moto">
+		<center>
+			<i class="fa fa-dollar"></i>
+			<br>
+			<h3>Harga Terjangkau</h3>
+		<p>Produk yang kami tawarkan relativ murah.</p>
+		</center>
+	</div>
+	<div class="moto">
+		<center>
+			<i class="fa fa-cubes"></i>
+			<br>
+			<h3>Banyak Produk Pilihan</h3>
+		<p>Dapatkan banyak pilihan kebutuhan anda disini.</p>
+		</center>
+	</div>
+	<div class="moto">
+		<center>
+			<i class="fa fa-paypal"></i>
+			<br>
+			<h3>Garansi</h3>
+		<p>Semua produk wajib digaransikan.</p>
+		</center>
+	</div>
+</div>
 	<footer>
-		<div class="item">
-			<h3>Kategori</h3>
-			<ul>
-				<li>Laptop</li>
-				<li>Smartphone</li>
-				<li>Aksesoris</li>
-			</ul>
-		</div>
-		<div class="item">
-			<h3>Perusahaan</h3>
-			<ul>
-				<li>Tentang Kami</li>
-				<li>Kontak</li>
-			</ul>
-		</div>
-		<div class="item">
-			<h3>Alamat</h3>
-			<ul>
-				<li>Halmahera gang 4 no 7a</li>
-				<li>(+62) 853 2277 8935</li>
-				<li>
-					<a href="">hairulanam21@gmail.com</a>
-				</li>
-				<li>
-					<a href="">162410101054@students.unej.ac.id</a>
-				</li>
-			</ul>
-		</div>
-		<div class="item">
-			<h3>Yuk Langganan</h3>
-			<input type="email">
-			<button type="submit">Kirim</button>
-		</div>
-	</footer>	
+	<div class="item">
+		<h3>Kategori</h3>
+		<ul>
+			<li>Laptop</li>
+			<li>Smartphone</li>
+			<li>Aksesoris</li>
+		</ul>
+	</div>
+	<div class="item">
+		<h3>Perusahaan</h3>
+		<ul>
+			<li>Tentang Kami</li>
+			<li>Kontak</li>
+		</ul>
+	</div>
+	<div class="item">
+		<h3>Alamat</h3>
+		<ul>
+			<li>Jl. Kalimantan no.37 Jember</li>
+			<li>(+62) 853 2277 8935</li>
+			<li>
+				<a href="">hairulanam21@gmail.com</a>
+			</li>
+			<li>(+62) 813 3101 7597</li>
+			<li>
+				<a href="">162410101054@students.unej.ac.id</a>
+			</li>
+		</ul>
+	</div>
+	<div class="item">
+		<h3>Yuk Langganan</h3>
+		<input type="email">
+		<button type="submit">Kirim</button>
+	</div>
+</footer>
+
+
+<div class="search">
+
+	<span class="tutup-search">
+		<i class="fa fa-close"></i>
+	</span>
+
+	<center>
+		<form action="">
+			<input type="text" placeholder="Masukkan keyword pencarian lalu tekan enter ... ">
+		</form>
+	</center>
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+<script type="text/javascript">
+	
+	$('#pencarian').on('click', function(){
+
+		$('.search').fadeIn();
+
+		$('.search').find('input').trigger('focus');		
+
+	});
+
+	$('.tutup-search').on('click', function(){
+
+		$('.search').fadeOut();
+
+	});
+
+</script>	
 </body>
 </html>

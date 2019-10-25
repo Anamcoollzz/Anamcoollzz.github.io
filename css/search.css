@@ -1,0 +1,44 @@
+#pencarian {
+    cursor: pointer;
+}
+.search {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(138, 31, 145, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 999;
+    overflow: hidden;
+    display: none;
+}
+
+.search input {
+    margin-top: 20%;
+    width: 80%;
+    height: 50px;
+    padding: 30px 20px;
+    font-size: 30px;
+}
+
+.tutup-search {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.tutup-search i {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    margin-left: 13px;
+}

@@ -1,0 +1,22 @@
+.checkout{
+    display: block;
+	padding: 100px 200px;
+	background-color: white;
+	margin-bottom: 20px;
+}
+
+.kode {
+    width: 20%;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid black;
+    background-color: gray;
+}
+
+@media screen and (max-width: 425px) {
+
+	.checkout {
+		padding: 50px 10px;
+	}
+
+}
