@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Profil</title>
+	<title>Edit Profil</title>
 	<meta name="author" content="Hairul Anam, Firdaus Ababil">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/reset.css">
@@ -90,40 +90,63 @@
 	<div class="profil">
 		<div class="profil-kiri">
             <div class="gambar-gede">
-				<img src="img/profil.png" alt="">
+				<img id="fotoProfil" src="img/profil.png" alt="">
 			</div>
 		</div>
 		<div class="profil-kanan">
-        <h2 class="judul-profil">Profil</h2>
+        <h2 class="judul-profil">Edit Profil</h2>
+        <form action=# onsubmit="konfirmasi()">
 			<table>
 				<tbody>
 					<tr>
                         <td>Nama Lengkap</td>
                         <td style="text-align: right">:</td>
-						<td>Unej Shitpost</td>
+						<td><input type="text" id="inputan" placeholder="nama lengkap" required></td>
 					</tr>
 					<tr>
                         <td>Nama Pengguna</td>
                         <td style="text-align: right">:</td>
-						<td>unejshitpost</td>
+						<td><input type="text" id="inputan" placeholder="nama lengkap" required></td>
 					</tr>
 					<tr>
                         <td>Email</td>
                         <td style="text-align: right">:</td>
-						<td>shitpost@unej.ac.id</td>
+						<td style="color: gray">shitpost@unej.ac.id</td>
 					</tr>
 					<tr>
-                        <td>Bergabung pada</td>
+                        <td>Ubah Foto</td>
                         <td style="text-align: right">:</td>
-						<td>17 Agustus 2019</td>
+						<td><input type="file" id="ubahFoto" accept=".jpg, .png, .jpeg|image/*"></td>
 					</tr>
 				</tbody>
             </table>
             <br><br>
             <div>
-                <form action="edit-profil.html">
-                    <input type="submit" class="btn btn-primary btn-lg" value="Ubah Profil">
+                <form action="#">
+                    <input type="submit" class="btn btn-primary btn-lg" value="Simpan">
                 </form>
+            </div>
+            <div style="margin-top: 15%">
+            	<h2 class="judul-profil">Informasi File</h2>
+            	<table>
+            		<tbody>
+            			<tr>
+                        <td>Nama File</td>
+                        <td style="text-align: right">:</td>
+						<td><p id="namaFile"></p></td>
+					</tr>
+					<tr>
+                        <td>Ukuran File</td>
+                        <td style="text-align: right">:</td>
+						<td><p id="ukuranFile"></p></td>
+					</tr>
+					<tr>
+                        <td>Tipe File</td>
+                        <td style="text-align: right">:</td>
+						<td><p id="tipeFile"></p></td>
+					</tr>
+            		</tbody>
+            	</table>
             </div>
 		</div>
 	</div>
@@ -198,5 +221,34 @@
 	});
 
 </script>
+<script type="text/javascript">
+	window.addEventListener('load', function() {
+  document.querySelector('input[type="file"]').addEventListener('change', function() {
+      if (this.files && this.files[0]) {
+          var img = document.querySelector('img');
+          img.src = URL.createObjectURL(this.files[0]);
+          img.onload = tampilKeterangan;
+      }
+  });
+});
+
+function tampilKeterangan() { 
+		var name = document.getElementById('ubahFoto'); 
+		document.getElementById('namaFile').innerHTML = name.files.item(0).name;
+		document.getElementById('ukuranFile').innerHTML = (name.files.item(0).size/1000) +" Kb";
+		document.getElementById('tipeFile').innerHTML = name.files.item(0).type;
+}
+</script>
+<script type="text/javascript">
+	function konfirmasi() {
+		var z = confirm("Apakah ingin menyimpan perubahan?");
+      if (z == true) {
+        window.location = "profil.html";
+      } else {
+        window.close();
+      }
+	}
+</script>
+
 </body>
 </html>
