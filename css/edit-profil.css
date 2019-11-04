@@ -54,6 +54,10 @@
 	margin-bottom: 10px;
 }
 
+#inputan {
+	padding: 5px;
+}
+
 @media screen and (max-width: 425px) {
 
 	.profil {
