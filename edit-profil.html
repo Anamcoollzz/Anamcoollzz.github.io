@@ -222,22 +222,13 @@
 
 </script>
 <script type="text/javascript">
-	window.addEventListener('load', function() {
-  document.querySelector('input[type="file"]').addEventListener('change', function() {
-      if (this.files && this.files[0]) {
-          var img = document.querySelector('img');
-          img.src = URL.createObjectURL(this.files[0]);
-          img.onload = tampilKeterangan;
-      }
-  });
-});
-
-function tampilKeterangan() { 
-		var name = document.getElementById('ubahFoto'); 
-		document.getElementById('namaFile').innerHTML = name.files.item(0).name;
-		document.getElementById('ukuranFile').innerHTML = (name.files.item(0).size/1000) +" Kb";
-		document.getElementById('tipeFile').innerHTML = name.files.item(0).type;
-}
+	$(document).ready(function(){
+        $('input[type="file"]').change(function(e){
+          document.getElementById('namaFile').innerHTML = e.target.files[0].name;
+          document.getElementById('ukuranFile').innerHTML = (e.target.files[0].size/1000) +" Kb";
+          document.getElementById('tipeFile').innerHTML = e.target.files[0].type;
+        })
+      });
 </script>
 <script type="text/javascript">
 	function konfirmasi() {
