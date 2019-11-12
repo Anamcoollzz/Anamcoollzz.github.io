@@ -88,18 +88,18 @@
 	<div class="masuk">
 		<h2>Daftar untuk belanja</h2>
 		<div class="masuk-form">
-			<form action="masuk.html" onsubmit="alert('Berhasil mendaftar, silahkan masuk untuk melanjutkan')">
+			<form action="masuk.html" class="form-masuk">
 			Nama Lengkap
 			<br>
-			<input type="text" required>
+			<input type="text" class="nama" >
 			<br>
 			Email
 			<br>
-			<input type="email" required>
+			<input type="email" class="email" >
 			<br>
 			Password
 			<br>
-			<input type="Password" required>
+			<input type="Password" class="password" >
 			<br>
 			<button type="submit">Daftar</button>
 			<br>
@@ -161,6 +161,31 @@
 </div>
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
+	
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.form-masuk').submit(function(e){
+			e.preventDefault();
+			var nama = $('.nama').val();
+			var email = $('.email').val();
+			var password = $('.password').val();
+			$(".error").remove();
+			if (nama.length < 3) {
+				alert("nama anda kosong atau terlalu pendek");
+			}
+			if (email.length < 1) {
+				alert("email anda kosong, harap isi email!");
+			}
+			if (password.length < 1) {
+				alert("password anda kosong, silahkan isi password!");
+			} else {
+				if (password.length > 1 && password.length < 8) {
+					alert("password anda terlalu pendek, minimal 8 karakter");
+				}
+			}
+		});
+	});
+</script>
 
 <script type="text/javascript">
 	
