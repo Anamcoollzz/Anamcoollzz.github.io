@@ -29,13 +29,13 @@ $(document).ready(function(){
 		btn.attr('name', page);
 
 		var doc = 'json/dataProduk'+page+'.json';
-		console.log(doc);
 
 		$.ajax({
 			url: doc,
 			data: {},
 			method: 'get',
 			success: function(resp) {
+				console.log(doc);
 				var items = JSON.parse(resp);
 				for (var i = 0, i2 = items.length; i < i2; i++) {
 					$(".img-"+i).attr("src",items[i].img);
