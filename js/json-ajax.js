@@ -40,6 +40,9 @@ $(document).ready(function(){
 					$(".img-"+i).attr("src",items[i].img);
 					$(".harga-"+i).html(items[i].harga);
 					$(".judul-"+i).html(items[i].name);
+					console.log(items[i].img);
+					console.log(items[i].harga);
+					console.log(items[i].name);
 				}
 			},
 			error: function(code, reason){
