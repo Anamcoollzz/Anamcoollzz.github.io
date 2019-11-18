@@ -29,6 +29,7 @@ $(document).ready(function(){
 		btn.attr('name', page);
 
 		var doc = 'json/dataProduk'+page+'.json';
+		console.log(doc);
 
 		$.ajax({
 			url: doc,
