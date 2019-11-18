@@ -35,15 +35,11 @@ $(document).ready(function(){
 			data: {},
 			method: 'get',
 			success: function(resp) {
-				console.log(doc);
 				var items = JSON.parse(resp);
 				for (var i = 0, i2 = items.length; i < i2; i++) {
 					$(".img-"+i).attr("src",items[i].img);
 					$(".harga-"+i).html(items[i].harga);
 					$(".judul-"+i).html(items[i].name);
-					console.log(items[i].img);
-					console.log(items[i].harga);
-					console.log(items[i].name);
 				}
 			},
 			error: function(code, reason){
