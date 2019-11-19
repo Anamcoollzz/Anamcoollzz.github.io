@@ -35,7 +35,8 @@ $(document).ready(function(){
 			data: {},
 			method: 'get',
 			success: function(resp) {
-				var items = JSON.parse(resp);
+				//var items = JSON.parse(resp);
+				var items = resp;
 				for (var i = 0, i2 = items.length; i < i2; i++) {
 					$(".img-"+i).attr("src",items[i].img);
 					$(".harga-"+i).html(items[i].harga);
