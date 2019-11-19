@@ -165,23 +165,31 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('.form-masuk').submit(function(e){
-			e.preventDefault();
+			e.stopPropagation();
 			var nama = $('.nama').val();
 			var email = $('.email').val();
 			var password = $('.password').val();
 			$(".error").remove();
+			var isError = false;
 			if (nama.length < 3) {
 				alert("nama anda kosong atau terlalu pendek");
+				isError = true;
 			}
 			if (email.length < 1) {
 				alert("email anda kosong, harap isi email!");
+				isError = true;
 			}
 			if (password.length < 1) {
 				alert("password anda kosong, silahkan isi password!");
+				isError = true;
 			} else {
 				if (password.length > 1 && password.length < 8) {
 					alert("password anda terlalu pendek, minimal 8 karakter");
+					isError = true;
 				}
+			}
+			if(!isError){
+				$(this).submit();
 			}
 		});
 	});
