@@ -189,8 +189,9 @@
 				}
 			}
 			if(!isError){
-				$(this).submit();
+				return true;
 			}
+			return false;
 		});
 	});
 </script>
