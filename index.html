@@ -30,6 +30,8 @@
 	<link rel="stylesheet" href="css/pesanan.css">
 	<!-- search -->
 	<link rel="stylesheet" href="css/search.css">
+	<!-- modal -->
+	<link rel="stylesheet" href="css/modal.css">
 	<!-- font -->
 	<link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
 	<script>
@@ -233,23 +235,57 @@
 	</center>
 </div>
 
+<div id="myModal" class="modal">
+	<div class="modal-content">
+		<span class="close">&times;</span>
+		<center>
+			<form action="">
+				<input type="text" placeholder="Masukkan keyword pencarian lalu tekan enter atau tekan tombol cari ... ">
+				<br><br><br>
+				<a href="" class="btn btn-primary btn-lg" >Cari</a>
+			</form>
+		</center>
+	</div>
+
+</div>
+
 <script type="text/javascript" src="js/jquery.min.js"></script>
 
 <script type="text/javascript">
 	
-	$('#pencarian').on('click', function(){
+	// $('#pencarian').on('click', function(){
 
-		$('.search').fadeIn();
+	// 	$('.search').fadeIn();
 
-		$('.search').find('input').trigger('focus');		
+	// 	$('.search').find('input').trigger('focus');		
 
-	});
+	// });
 
-	$('.tutup-search').on('click', function(){
+	// $('.tutup-search').on('click', function(){
 
-		$('.search').fadeOut();
+	// 	$('.search').fadeOut();
 
-	});
+	// });
+
+	var modal = document.getElementById("myModal");
+
+	var btn = document.getElementById("pencarian");
+
+	var span = document.getElementsByClassName("close")[0];
+
+	btn.onclick = function() {
+		modal.style.display = "block";
+	}
+
+	span.onclick = function() {
+		modal.style.display = "none";
+	}
+
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}
 
 </script>
 </body>
