@@ -3,7 +3,7 @@
 
 <head>
 	<title>Edit Profil</title>
-	<meta name="author" content="Hairul Anam, Firdaus Ababil">
+	<meta name="author" content="Hairul Anam, Ahmad Firdaus Ababil">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/grid.css">
@@ -32,6 +32,8 @@
 	<link rel="stylesheet" href="css/pesanan.css">
 	<!-- search -->
 	<link rel="stylesheet" href="css/search.css">
+	<!-- modal -->
+	<link rel="stylesheet" href="css/modal.css">
 	<!-- font -->
 	<link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
 	<script>
@@ -76,8 +78,8 @@
 				<a href="checkout.html">Checkout</a>
 			</div>
 		</div>
-		<a href="masuk.html">Masuk</a>
-		<a href="daftar.html">Daftar</a>
+		<a href="#" id="btMasuk">Masuk</a>
+		<a href="#" id="btDaftar">Daftar</a>
 		<div class="cart-dan-pencarian">
 			<i class="fa fa-shopping-cart" style="cursor: pointer;" onclick="gotoKeranjang()"></i>
 			&nbsp;&nbsp;&nbsp;
@@ -90,68 +92,82 @@
 	<div class="profil">
 		<div class="profil-kiri">
             <div class="gambar-gede">
-				<img id="fotoProfil" src="img/profil.png" alt="">
-			</div>
-		</div>
-		<div class="profil-kanan">
-        <h2 class="judul-profil">Edit Profil</h2>
-        <form action=# onsubmit="konfirmasi()">
-			<table>
-				<tbody>
-					<tr>
-                        <td>Nama Lengkap</td>
-                        <td style="text-align: right">:</td>
-						<td><input type="text" id="inputan" placeholder="nama lengkap" required></td>
-					</tr>
-					<tr>
-                        <td>Nama Pengguna</td>
-                        <td style="text-align: right">:</td>
-						<td><input type="text" id="inputan" placeholder="nama lengkap" required></td>
-					</tr>
-					<tr>
-                        <td>Email</td>
-                        <td style="text-align: right">:</td>
-						<td style="color: gray">shitpost@unej.ac.id</td>
-					</tr>
-					<tr>
-                        <td>Ubah Foto</td>
-                        <td style="text-align: right">:</td>
-						<td><input type="file" id="ubahFoto" accept=".jpg, .png, .jpeg|image/*"></td>
-					</tr>
-				</tbody>
-            </table>
-            <br><br>
-            <div>
-                <form action="#">
-                    <input type="submit" class="btn btn-primary btn-lg" value="Simpan">
-                </form>
+                <img id="fotoProfil" src="img/profil.png" alt="">
             </div>
-            <div style="margin-top: 15%">
-            	<h2 class="judul-profil">Informasi File</h2>
-            	<table>
-            		<tbody>
-            			<tr>
-                        <td>Nama File</td>
-                        <td style="text-align: right">:</td>
-						<td><p id="namaFile"></p></td>
-					</tr>
-					<tr>
-                        <td>Ukuran File</td>
-                        <td style="text-align: right">:</td>
-						<td><p id="ukuranFile"></p></td>
-					</tr>
-					<tr>
-                        <td>Tipe File</td>
-                        <td style="text-align: right">:</td>
-						<td><p id="tipeFile"></p></td>
-					</tr>
-            		</tbody>
-            	</table>
-            </div>
-		</div>
-	</div>
+        </div>
+        <div class="profil-kanan">
+            <h2 class="judul-profil">Edit Profil</h2>
+            <form action=# onsubmit="konfirmasi()">
+             <table>
+                <tbody>
+                   <tr>
+                    <td>Nama Lengkap</td>
+                    <td style="text-align: right">:</td>
+                    <td><input type="text" id="inputan" placeholder="nama lengkap" required></td>
+                </tr>
+                <tr>
+                    <td>Nama Pengguna</td>
+                    <td style="text-align: right">:</td>
+                    <td><input type="text" id="inputan" placeholder="nama lengkap" required></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td style="text-align: right">:</td>
+                    <td style="color: gray">shitpost@unej.ac.id</td>
+                </tr>
+                <tr>
+                    <td>Ubah Foto</td>
+                    <td style="text-align: right">:</td>
+                    <td><input type="file" id="ubahFoto" accept=".jpg, .png, .jpeg|image/*"></td>
+                </tr>
+            </tbody>
+        </table>
+        <br><br>
+        <div>
+            <form action="#">
+                <input type="submit" class="btn btn-primary btn-lg" value="Simpan">
+            </form>
+        </div>
+        <div style="margin-top: 15%">
+           <h2 class="judul-profil">Informasi File</h2>
+           <table>
+              <tbody>
+                 <tr>
+                    <td>Nama File</td>
+                    <td style="text-align: right">:</td>
+                    <td><p id="namaFile"></p></td>
+                </tr>
+                <tr>
+                    <td>Ukuran File</td>
+                    <td style="text-align: right">:</td>
+                    <td><p id="ukuranFile"></p></td>
+                </tr>
+                <tr>
+                    <td>Tipe File</td>
+                    <td style="text-align: right">:</td>
+                    <td><p id="tipeFile"></p></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
 
-	<footer>
+<div id="modalProfil" class="modal">
+    <div class="modal-content">
+        <span class="close tutup4">&times;</span>
+        <center>
+            <form action="">
+                <p>Apakah anda ingin meyimpan perubahan?</p>
+                <br><br><br>
+                <a href="" class="btn btn-primary btn-lg" id="btIya">Ya</a>
+                <a href="" class="btn btn-primary btn-lg" id="btTidak">Tidak</a>
+            </form>
+        </center>
+    </div>
+</div>
+
+<footer>
 	<div class="item">
 		<h3>Kategori</h3>
 		<ul>
@@ -202,43 +218,269 @@
 	</center>
 </div>
 
+<div id="myModal" class="modal">
+	<div class="modal-content">
+		<span class="close tutup1">&times;</span>
+		<center>
+			<form action="">
+				<input type="text" placeholder="Masukkan keyword pencarian lalu tekan enter ... ">
+				<br><br><br>
+				<a href="" class="btn btn-primary btn-lg" >Cari</a>
+			</form>
+		</center>
+	</div>
+</div>
+
+<div id="modalLogin" class="modal">
+	<div class="modal-content">
+		<span class="close tutup2">&times;</span>
+		<center>
+			<h2>Masuk untuk belanja</h2>
+			<div class="masuk-form">
+				<form action="index.html">
+					Email
+					<br>
+					<input type="email" required>
+					<br>
+					Password
+					<br>
+					<input type="Password" required>
+					<br>
+					<button type="submit">Masuk</button>
+					<br>
+					<br>
+					Belum punya akun? <a href="#" id="btDaftar2">daftar</a>
+				</form>
+			</div>
+		</center>
+	</div>
+</div>
+
+<div id="modalDaftar" class="modal">
+	<div class="modal-content">
+		<span class="close tutup3">&times;</span>
+		<center>
+			<h2>Daftar untuk belanja</h2>
+			<div class="masuk-form">
+				<form action="index.html" class="form-masuk">
+					Nama Lengkap
+					<br>
+					<input type="text" class="nama" >
+					<br>
+					<span class="spanError" id="spanNama"><p id="namaError">Nama Kosong</p></span>
+					<br>
+					Email
+					<br>
+					<input type="email" class="email" >
+					<br>
+					<span class="spanError" id="spanEmail"><p id="emailError">Email Kosong</p></span>
+					<br>
+					Password
+					<br>
+					<input type="Password" class="password" >
+					<br>
+					<span class="spanError" id="spanPass"><p id="passwordError">Password Kosong</p></span>
+					<br>
+					<button type="submit">Daftar</button>
+					<br>
+					<br>
+					Sudah punya akun? <a href="#" id="btMasuk2">masuk</a>
+				</form>
+			</div>
+		</center>
+	</div>
+</div>
+
 <script type="text/javascript" src="js/jquery.min.js"></script>
 
 <script type="text/javascript">
-	
-	$('#pencarian').on('click', function(){
 
-		$('.search').fadeIn();
+	// $('#pencarian').on('click', function(){
 
-		$('.search').find('input').trigger('focus');		
+	// 	$('.search').fadeIn();
 
+	// 	$('.search').find('input').trigger('focus');		
+
+	// });
+
+	// $('.tutup-search').on('click', function(){
+
+	// 	$('.search').fadeOut();
+
+	// });
+
+	var modal = document.getElementById("myModal");
+	var btn = document.getElementById("pencarian");
+	var span = document.getElementsByClassName("tutup1")[0];
+	btn.onclick = function() {
+		modal.style.display = "block";
+	}
+	span.onclick = function() {
+		modal.style.animationName = 'animateHide';
+		setTimeout(function(){
+			modal.style.display = "none";
+		}, 400);
+	}
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}
+
+</script>
+
+<script type="text/javascript">
+	var modal = document.getElementById("modalLogin");
+	var modal2 = document.getElementById("modalDaftar");
+	var btnLogin1 = document.getElementById("btMasuk");
+	var btnLogin2 = document.getElementById("btMasuk2");
+	var btnDaftar1 = document.getElementById("btDaftar");
+	var btnDaftar2 = document.getElementById("btDaftar2");
+	var span2 = document.getElementsByClassName("tutup2")[0];
+	var span3 = document.getElementsByClassName("tutup3")[0];
+	btnLogin1.onclick = function() {
+		modal.style.animationName = 'animateShow';
+		setTimeout(function(){
+			modal.style.display = "block";
+			modal2.style.display = "none";
+		}, 400);
+	}
+	btnDaftar1.onclick = function() {
+		modal2.style.animationName = 'animateShow';
+		setTimeout(function(){
+			modal.style.display = "none";
+			modal2.style.display = "block";
+		}, 400);
+	}
+	btnLogin2.onclick = function() {
+		modal.style.animationName = 'animateShow';
+		setTimeout(function(){
+			modal.style.display = "block";
+			modal2.style.display = "none";
+		}, 400);
+	}
+	btnDaftar2.onclick = function() {
+		modal2.style.animationName = 'animateShow';
+		setTimeout(function(){
+			modal.style.display = "none";
+			modal2.style.display = "block";
+		}, 400);
+	}
+	span2.onclick = function() {
+		modal.style.animationName = 'animateHide';
+		setTimeout(function(){
+			modal.style.display = "none";
+			modal2.style.display = "none";
+		}, 400);
+	}
+	span3.onclick = function() {
+		modal2.style.animationName = 'animateHide';
+		setTimeout(function(){
+			modal.style.display = "none";
+			modal2.style.display = "none";
+		}, 400);
+	}
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.animationName = 'animateHide';
+		setTimeout(function(){
+			modal.style.display = "none";
+		}, 400);
+		} 
+		if (event.target == modal2) {
+			modal2.style.animationName = 'animateHide';
+		setTimeout(function(){
+			modal2.style.display = "none";
+		}, 400);
+		} 
+	}
+</script>
+
+<script type="text/javascript">
+	function bukamodal(){
+		var modal = document.getElementById("modalLogin");
+		var modal2 = document.getElementById("modalDaftar");
+		var span = document.getElementsByClassName("tutup2")[0];
+		modal.style.display = "block";
+		modal2.style.display = "none";
+		span.onclick = function() {
+			modal.style.display = "none";
+			modal2.style.display = "none";
+		}
+	}
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.form-masuk').submit(function(e){
+			e.stopPropagation();
+			var nama = $('.nama').val();
+			var email = $('.email').val();
+			var password = $('.password').val();
+			var errName = document.getElementById('spanNama');
+			var errEmail = document.getElementById('spanEmail');
+			var errPass = document.getElementById('spanPass');
+			var passErrValue document.getElementById('passwordError');
+			$(".error").remove();
+			var isError = false;
+			if (nama.length < 3) {
+				errName.style.display = "block";
+				isError = true;
+			}
+			if (email.length < 1) {
+				errEmail.style.display = "block";
+				isError = true;
+			}
+			if (password.length < 1) {
+				errPass.style.display = "block";
+				isError = true;
+			} else {
+				if (password.length > 1 && password.length < 8) {
+					passErrValue.innerHTML = "Minimal password 8 kata";
+					errPass.style.display = "block";
+					isError = true;
+				}
+			}
+			if(!isError){
+				return true;
+			}
+			return false;
+		});
 	});
-
-	$('.tutup-search').on('click', function(){
-
-		$('.search').fadeOut();
-
-	});
-
 </script>
 <script type="text/javascript">
 	$(document).ready(function(){
         $('input[type="file"]').change(function(e){
-          document.getElementById('namaFile').innerHTML = e.target.files[0].name;
-          document.getElementById('ukuranFile').innerHTML = (e.target.files[0].size/1000) +" Kb";
-          document.getElementById('tipeFile').innerHTML = e.target.files[0].type;
+            document.getElementById('fotoProfil').src = window.URL.createObjectURL(e.target.files[0]);
+            document.getElementById('namaFile').innerHTML = e.target.files[0].name;
+            document.getElementById('ukuranFile').innerHTML = (e.target.files[0].size/1000) +" Kb";
+            document.getElementById('tipeFile').innerHTML = e.target.files[0].type;
         })
-      });
+    });
 </script>
+
 <script type="text/javascript">
 	function konfirmasi() {
-		var z = confirm("Apakah ingin menyimpan perubahan?");
-      if (z == true) {
-        window.location = "profil.html";
-      } else {
-        window.close();
-      }
-	}
+		var modal = document.getElementById("modalProfil");
+        var span = document.getElementsByClassName("tutup4")[0];
+        var btIya = document.getElementById("btIya");
+        var btTidak = document.getElementById("btTidak");
+        modal.style.display = "block";
+        btIya.onclick = function() {
+            modal.style.display = "none";
+        }
+        btTidak.onclick = function() {
+            modal.style.display = "none";
+        }
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    }
 </script>
 
 </body>
