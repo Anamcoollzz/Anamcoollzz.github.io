@@ -127,3 +127,32 @@ $(document).ready(function(){
 	});
 	});
 
+function bukaAlert(){
+			var modal = document.getElementById("alertMaaf");
+			var btn = document.getElementById("btOk");
+			var span = document.getElementsByClassName("tutup5")[0];
+			modal.style.animationName = 'animateShow';
+			setTimeout(function(){
+				modal.style.display = "block";
+			}, 400);
+			btn.onclick = function() {
+				modal.style.animationName = 'animateHide';
+				setTimeout(function(){
+					modal.style.display = "none";
+				}, 400);
+			}
+			span.onclick = function() {
+				modal.style.animationName = 'animateHide';
+				setTimeout(function(){
+					modal.style.display = "none";
+				}, 400);
+			}
+			window.onclick = function(event) {
+				if (event.target == modal) {
+					modal.style.animationName = 'animateHide';
+					setTimeout(function(){
+						modal.style.display = "none";
+					}, 400);
+				}
+			}
+		}
