@@ -1,9 +1,12 @@
-.masuk h2  {
+.form-masuk {
+	max-width: 400px;
+}
+.form-masuk h2  {
 	text-align: center;
 	margin-top: 150px;
 	margin-bottom: 30px;
 }
-.masuk .masuk-form {
+.form-masuk .form-masuk-form {
 	margin: auto;
 	padding: 30px;
 	background-color: #FFFFFF;
@@ -11,7 +14,7 @@
 	width: 300px;
 }
 
-.masuk input {
+.form-masuk input {
 	padding: 10px 20px;
 	border: 1px solid white;
 	width: 86%;
@@ -20,7 +23,7 @@
 	background-color: #E5E5E5;
 }
 
-.masuk button {
+.form-masuk button {
 	background-color: #7A04FF;
 	padding: 10px 20px;
 	width: 100%;
@@ -30,21 +33,21 @@
 
 @media screen and (max-width: 425px) {
 
-	.masuk {
+	.form-masuk {
 		padding: 50px 10px;
 	}
 
-	.masuk input {
+	.form-masuk input {
 		width: 82%;
 	}
 
-	.masuk h2  {
+	.form-masuk h2  {
 		text-align: center;
 		margin-top: 50px;
 		margin-bottom: 30px;
 	}
 
-	.masuk .masuk-form {
+	.form-masuk .form-masuk-form {
 		width: 80%;
 		display: block;
 	}

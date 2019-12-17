@@ -22,13 +22,6 @@
   animation-duration: 0.5s;
 }
 
-.modal input {
-    width: 80%;
-    height: 30px;
-    padding: 30px 20px;
-    font-size: 30px;
-}
-
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto; 
@@ -57,4 +50,8 @@
 
 .spanError p {
   color: red;
+}
+
+#modalLogin .modal-content, #modalDaftar .modal-content {
+  max-width: 400px;
 }
